@@ -31,9 +31,10 @@ function App() {
 
   return (
     <div className="App">
-      <h2>Expense Tracker</h2>
       <NewExpense/>
-      <Expenses expense = {expenses}></Expenses>
+      <Expenses 
+        expense = {expenses}>
+      </Expenses>
     </div>
   );
 }
