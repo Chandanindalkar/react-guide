@@ -3,9 +3,18 @@ import ExpenseForm from './ExpenseForm';
 
 function NewExpense() {
 
+    const getExpenseData = (data) => {
+        const expenseData = {
+            ...data
+        }
+        console.log(expenseData);
+    }
+
     return (
         <div className='new-expense'>
-            <ExpenseForm/>
+            <ExpenseForm
+                onExpenseDataHandler = {getExpenseData}
+            />
         </div>
     )
 }
