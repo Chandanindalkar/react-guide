@@ -28,10 +28,20 @@ function App() {
       date: new Date(2021, 5, 12),
     },
   ];
-  
+
+  const getExpenseData = data => {
+    const ExpenseData = {
+      ...data
+    }
+    console.log('from App Comp')
+    console.log(ExpenseData)
+  }
+
   return (
     <div className="App">
-      <NewExpense/>
+      <NewExpense
+        onGetExpenseData = {getExpenseData}
+      />
       <Expenses 
         expense = {expenses}>
       </Expenses>

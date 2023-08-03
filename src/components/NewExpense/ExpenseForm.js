@@ -73,7 +73,7 @@ function ExpenseForm(props) {
         }
 
         // console.log(expenseData)
-        props.onExpenseDataHandler(expenseData);
+        props.onSaveExpenseData(expenseData);
 
         //just a neat practice to keep input boxes clear
         setenteredAmount('') 
