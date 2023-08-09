@@ -13,7 +13,7 @@ function Expenses(props) {
         setSelectedYear(year);
     }
 
-    const toRender = expenses.filter(condition)
+    const filteredExpenses = expenses.filter(condition)
 
     function condition(theYear) {
         const filteredYear = theYear.date.getFullYear()
@@ -27,14 +27,17 @@ function Expenses(props) {
                 onGetSelectedYear = {getSelectedYear}
                 default = {selectedYear}
             />
-            {toRender.map( (expense) => (
+            {filteredExpenses.length == 0 ? (<p>No Expenses Found!</p>) :
+            (filteredExpenses.map( (expense) => (
                 <ExpenseItem
                     key={expense.id}
                     title={expense.title}
                     amount = {expense.amount}
                     date = {expense.date}
                 />
-            ))}
+            ))) }
+
+            
         </Card>
     )
 }
