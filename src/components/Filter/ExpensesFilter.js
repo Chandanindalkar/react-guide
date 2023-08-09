@@ -4,7 +4,7 @@ import './ExpensesFilter.css';
 
 const ExpensesFilter = (props) => {
     const def = props.default
-    console.log(`from filter ${def}`)
+    // console.log(`from filter ${def}`)
 
     const dropDownHandler = (event) => {
         const year = event.target.value

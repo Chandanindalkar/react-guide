@@ -13,6 +13,13 @@ function Expenses(props) {
         setSelectedYear(year);
     }
 
+    const toRender = expenses.filter(condition)
+
+    function condition(theYear) {
+        const filteredYear = theYear.date.getFullYear()
+        return filteredYear == selectedYear
+    }
+
     return (
         <Card className="expenses">
 
@@ -20,8 +27,9 @@ function Expenses(props) {
                 onGetSelectedYear = {getSelectedYear}
                 default = {selectedYear}
             />
-            {expenses.map( (expense) => (
+            {toRender.map( (expense) => (
                 <ExpenseItem
+                    key={expense.id}
                     title={expense.title}
                     amount = {expense.amount}
                     date = {expense.date}
