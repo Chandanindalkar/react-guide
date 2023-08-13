@@ -1,7 +1,13 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import './ExpenseForm.css';
 
 function ExpenseForm(props) {
+
+    const set = () => {
+        props.items(true)
+    }
+
+
     const [enteredTitle, setenteredTitle] = useState('')
     const [enteredAmount, setenteredAmount] = useState('')
     const [enteredDate, setenteredDate] = useState('')
@@ -112,6 +118,7 @@ function ExpenseForm(props) {
                 </div>
             </div>
             <div className='new-expense__actions'>
+                <button onClick={set}>Cancel</button>
                 <button type='submit'>Submit</button>
             </div>
         </form>
