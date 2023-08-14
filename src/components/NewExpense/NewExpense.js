@@ -9,6 +9,10 @@ function NewExpense(props) {
         setVal(false)
     }
 
+    const cancelHandler = () => {
+        setVal(true)
+    }
+
     const saveExpenseData = (data) => {
         const expenseData = {
             ...data
@@ -20,7 +24,7 @@ function NewExpense(props) {
     return (
         <div className='new-expense'>
             {val && <button onClick={addExpenseHandler}>Add New Expense</button>}
-            {!val && <ExpenseForm items={setVal} onSaveExpenseData = {saveExpenseData}/>}
+            {!val && <ExpenseForm cancel={cancelHandler} onSaveExpenseData = {saveExpenseData}/>}
             
         </div>
     )
