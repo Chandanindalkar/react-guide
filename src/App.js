@@ -32,6 +32,24 @@ const Initial_Expenses = [{
   amount: 1094.12,
   date: new Date(2023, 8, 12),
 },
+{
+  id: 'e6',
+  title: 'New Phone',
+  amount: 39994.00,
+  date: new Date(2022, 8, 11),
+},
+{
+  id: 'e7',
+  title: 'GoPro',
+  amount: 32000.00,
+  date: new Date(2023, 6, 12),
+},
+{
+  id: 'e8',
+  title: 'Helmet',
+  amount: 3700.00,
+  date: new Date(2023, 5, 12),
+},
 ];
 
 function App() {
