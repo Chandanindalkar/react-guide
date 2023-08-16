@@ -17,8 +17,9 @@ function Expenses(props) {
     const filteredExpenses = expenses.filter(condition)
 
     function condition(theYear) {
-        const filteredYear = theYear.date.getFullYear()
-        return filteredYear == selectedYear
+        const filteredYear = theYear.date.getFullYear().toString()
+
+        return filteredYear === selectedYear
     }
 
     

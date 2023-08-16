@@ -28,7 +28,7 @@ const Initial_Expenses = [{
 },
 {
   id: 'e5',
-  title: 'trousers',
+  title: 'Riding Gloves',
   amount: 1094.12,
   date: new Date(2023, 8, 12),
 },
